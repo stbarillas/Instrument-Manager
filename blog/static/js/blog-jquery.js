@@ -1,3 +1,4 @@
+
 $(document).ready( function() {
 
     $('td:contains("No Record")').css('color', 'red');

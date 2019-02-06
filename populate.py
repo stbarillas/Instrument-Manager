@@ -1,18 +1,15 @@
 import os
 from celery import Celery
-
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
 os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
-
 app = Celery('mysite', broker='amqp://guest@localhost//')
 app.config_from_object('django.conf:settings', namespace='CELERY')
 app.autodiscover_tasks()
-
 import django
 django.setup()
 from blog.models import Instrument
 
-
+# Function to quickly populate Database with instruments for testing purposes
 def populate():
 
     add_instrument(type='GC',
@@ -106,6 +103,7 @@ def populate():
 
     print('population complete')
 
+# retrieves instrument by IP address to avoid duplicates. Create instruments that are not found
 def add_instrument(type, address, name):
     instrument = Instrument.objects.get_or_create(ip_address=address)[0]
     instrument.instrument_type=type
@@ -124,7 +122,7 @@ def add_instrument(type, address, name):
     instrument.save()
     return
 
-# Start execution here!
+# Starts execution
 if __name__ == '__main__':
     print("Starting Instrument population script...")
     populate()

@@ -1,11 +1,13 @@
 {% extends 'blog/base.html' %}
-
+<!--Layout for checkout confirmation page-->
 {% block content %}
     <div class="detail">
         <div class="checkout-detail">
+            <!--Checks if user is already on waitlist for instrument requested. Does not allow for duplicates-->
             {% if onlist %}
                 <h1>You cannot join a wait list twice</h1>
                 <h1><a href="{% url 'instrument_list' %}" >Return to the homepage</a></h1>
+            <!--Displays instrument information and checkout form-->
             {% else %}
                 <div class="instrument">
                     <h1> Checking Out: {{ instrument.instrument_type }} {{ instrument.ip_address }}</h1>

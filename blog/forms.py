@@ -1,8 +1,6 @@
-from django.contrib import admin
 from django import forms
 from .models import Post, Instrument, Checklist, Profile
 from django.contrib.auth.models import User
-from django.shortcuts import render, get_object_or_404
 
 
 # form for the post model
@@ -56,7 +54,7 @@ class UserForm(forms.ModelForm):
         password = cleaned_data.get("password")
         password2 = cleaned_data.get("password2")
 
-        # If a mobile number is typed without a carrier, raise a flag
+        # If passwords don't match, raise a flag
         if password != password2:
             msg = forms.ValidationError("The two password fields didn't match.")
             self.add_error('password', msg)
@@ -88,14 +86,17 @@ class ProfileForm(forms.ModelForm):
             msg = forms.ValidationError("A mobile number is required if you enter a mobile carrier")
             self.add_error('mobile_number', msg)
 
+        # If sms is selected without a mobile number listed, raise a flag
         if receive_sms_notifications and mobile_number =="":
             msg = forms.ValidationError("A mobile number is required if you want sms notifications")
             self.add_error('mobile_number', msg)
 
+        # If a mobile carrier is typed without a carrier, raise a flag
         if receive_sms_notifications and mobile_carrier == "":
             msg = forms.ValidationError("A mobile carrier is required if you want sms notifications")
             self.add_error('mobile_carrier', msg)
 
+        # If email notifications is selected without an email raise a flag
         if receive_email_notifications and email == "":
             msg = forms.ValidationError("An email is required if you want email notifications")
             self.add_error('email', msg)
@@ -108,19 +109,3 @@ class MassMessageForm(forms.Form):
 
 class UserMessageForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea)
-
-# class TrainingRecordForm(forms.ModelForm):
-#
-#     class Meta:
-#         model = TrainingRecord
-#         fields = ('evidence',)
-#
-# class JobTitleForm(forms.ModelForm):
-#
-#     class Meta:
-#         model = JobTitle
-#         fields = ('title', 'required_training')
-#         widgets = {
-#             'required_training': forms.CheckboxSelectMultiple
-#         }
-#

@@ -3,6 +3,7 @@ from . import views
 from django.conf import settings
 from django.conf.urls.static import static
 
+# URL relies on primary keys to distinguish between different instruments
 urlpatterns = [
     url(r'^$', views.instrument_list, name='instrument_list'),
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),

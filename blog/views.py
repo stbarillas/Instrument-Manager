@@ -8,12 +8,11 @@ from django.shortcuts import redirect
 from django.contrib.auth import authenticate, login, logout, update_session_auth_hash
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.http import HttpResponseRedirect, HttpResponse
-from django.core.mail import EmailMessage, send_mass_mail
 from django.contrib.auth.forms import PasswordChangeForm
-from django.views.static import serve
-from datetime import datetime, timedelta
 from django.contrib.auth.models import User
 from .tasks import massMessageSend
+
+# Use @login_required to block pages from anon users
 
 
 @login_required
@@ -23,7 +22,7 @@ def post_list(request):
 
 @login_required
 def instrument_list(request):
-        # pulls all instruments from instrument model
+    # pulls all instruments from instrument model
     instruments = Instrument.objects.all().order_by('instrument_name')
 
     # pulls all checklists from checklist model
@@ -31,6 +30,7 @@ def instrument_list(request):
     # takes instruments, pushes them to template with variable 'instruments'
     return render(request, 'blog/instrument_list.html', {'instruments': instruments, 'checklists': checklists})
 
+# Saves instrument status
 def instrument_status(pk):
     instrument = Instrument.objects.get(pk=pk)
     if instrument.instrument_status == 'Out of Order':
@@ -42,6 +42,7 @@ def instrument_status(pk):
         instrument.instrument_status = 'Available'
         instrument.save()
 
+# Sets instrument owner for instruments
 def instrument_owner(pk):
     instrument = Instrument.objects.get(pk=pk)
 
@@ -63,7 +64,7 @@ def instrument_owner(pk):
         instrument.save()
 
 
-
+# functions pull information from database and render page with corresponding layout
 @login_required
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -207,7 +208,7 @@ def release_detail(request, pk):
             # Run instrument owner update function
             instrument_owner(pk)
             # Checks if current user is also the current instrument owner
-            # This should be replaced with a function that checks if the top entry has changed instead of comparing
+    # TO DO This should be replaced with a function that checks if the top entry has changed instead of comparing
             # the current user. Otherwise admin intervention will not result in an email
             if request.user == current_owner.user:
                 # Pull the new owner at the top of the waitlist for current instrument
@@ -224,6 +225,7 @@ def release_detail(request, pk):
         form = ReleaseForm()
     return render(request, 'blog/release_detail.html', {'form': form, 'instrument':instrument, 'onlist':onlist})
 
+# puts together all information required for email and calls email function.
 def email_send(instrument_pk, instrument_owner):
     full_name = instrument_owner.profile.get_full_name()
     user_email = instrument_owner.profile.email
@@ -244,6 +246,7 @@ def email_send(instrument_pk, instrument_owner):
         massMessageSend.delay(subject_line, message_text, recipient_list)
     return
 
+# puts together information needed to a mass email, and calls email function
 def mass_message (request):
     if request.method == "POST":
         form = MassMessageForm(request.POST,)
@@ -270,7 +273,7 @@ def register(request):
 
     if request.method == 'POST':
         # Attempt to grab information from the raw form information.
-        # Note that we make use of both UserForm and UserProfileForm.
+        # Note that we make use of both UserForm and UserProfileForm. They are linked One-To-One
         user_form = UserForm(request.POST)
         profile_form = ProfileForm(request.POST)
         if user_form.is_valid() and profile_form.is_valid():
@@ -285,7 +288,7 @@ def register(request):
             profile.save()
             return redirect('instrument_list')
 
-        # Invalid form or forms - mistakes or something else? Print problems to the terminal. They'll also be shown to the user.
+        # Invalid form or forms get shown to user.
         else:
             print(user_form.errors, profile_form.errors)
     else:
@@ -323,9 +326,6 @@ def user_login(request):
             # Bad login details were provided. So we can't log the user in.
             print ("Invalid login details: {0}, {1}".format(username, password))
             return HttpResponse("Invalid login details supplied.")
-
-    # The request is not a HTTP POST, so display the login form.
-    # This scenario would most likely be a HTTP GET.
     else:
         # No context variables to pass to the template system, hence the
         # blank dictionary object...
@@ -342,7 +342,7 @@ def user_settings(request):
             profile.save()
             return redirect('instrument_list')
 
-        # Invalid form or forms - mistakes or something else? Print problems to the terminal. They'll also be shown to the user.
+        # Invalid form or forms shown to the user.
         else:
             print(profile_form.errors)
     else:
@@ -416,6 +416,7 @@ def instrument_open_connection(request, pk):
     else:
         return render(request, 'blog/not_today.html')
 
+# Puts personal message from user to user together, then calls email function
 @login_required
 def user_message (request, pk):
     user = User.objects.get(pk=pk)

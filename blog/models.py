@@ -20,14 +20,14 @@ class Post(models.Model):
 
 
 class Instrument(models.Model):
-    # list instrument options available
+    # tuple of instrument labels
     instrument_options = (
         ('LC', 'LC'),
         ('LCMS', 'LCMS'),
         ('GC', 'GC'),
         ('GCMS', 'GCMS'),
     )
-
+    # tuple of instrument status options
     instrument_status_options = (
         ('Available', 'Available'),
         ('In Use', 'In Use'),
@@ -77,41 +77,7 @@ class Checklist(models.Model):
     def __str__(self):
         return str(self.instrument_pk)
 
-# class TrainingDocument(models.Model):
-#     document_name = models.CharField(max_length=150)
-#     document_copy = models.FileField(upload_to='documents')
-#     document_renewal_years = models.IntegerField(default=1)
-#     created_date = models.DateTimeField(default=timezone.now)
-#
-#
-#     def publish(self):
-#         return self.save
-#     def __str__(self):
-#         return str(self.document_name)
-#
-# class TrainingRecord(models.Model):
-#     user = models.ForeignKey(User, unique=False, blank=True, null=True)
-#     document_name = models.ForeignKey(TrainingDocument, blank=True, null=True, unique=False)
-#     evidence = models.ImageField(upload_to='records', blank=True, null=True)
-#     created_date = models.DateTimeField(default=timezone.now)
-#     renewal_date = models.DateTimeField(blank=True, null=True)
-#
-#     def publish(self):
-#         return self.save
-#
-#     def __str__(self):
-#         return (str(self.user) + " " + str(self.document_name))
-#
-# class JobTitle(models.Model):
-#     title = models.CharField(max_length=50)
-#     required_training = models.ManyToManyField(TrainingDocument)
-#
-#     def publish(self):
-#         return self.save
-#
-#     def __str__(self):
-#         return str(self.title)
-
+# Note: User and Profile models are linked One-to-One
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=30, blank=False)
@@ -123,6 +89,7 @@ class Profile(models.Model):
         blank=True,
         help_text='Optional'
     )
+    # tuple with carrier domains. These get added to phone numbers in order to text users
     carrier_options = (
         (None, ''),
         ('@txt.att.net', 'AT&T'),
@@ -135,13 +102,9 @@ class Profile(models.Model):
 
     receive_sms_notifications = models.BooleanField(default=False)
 
-    # job_title = models.ForeignKey(JobTitle, unique=False, null=True, on_delete=models.SET_NULL)
-    # manager = models.ForeignKey(User, unique=False, blank=True, related_name='+', null=True)
 
     def get_full_name(self):
-        """
-        Returns the first_name plus the last_name, with a space in between.
-        """
+        # Returns the first_name plus the last_name, with a space in between.
         full_name = '%s %s' % (self.first_name, self.last_name)
         return full_name.strip()
 

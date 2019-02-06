@@ -2,17 +2,19 @@
 {% block instruments %}class="active"{% endblock %}
 {% load staticfiles %}
 {% load tables %}
+<!--Layout for displaying all instruments in database-->
 {% block content %}
     <div class ="list">
     <div class="container-fluid">
         <div class="row">
             {% for instrument in instruments %}
                     <div class="thumbnail">
+                        <!--If loop to determine the status of the instrument -->
                         {% if instrument.instrument_status == "Out of Order" %}
                             <h4 class="alert alert-danger" role="alert">
-                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address|cut:"130.27.111." }}
+                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address }}
                                     {% if instrument.ip_address_2 %}
-                                        {{instrument.ip_address_2|cut:"130.27.111." }}
+                                        {{instrument.ip_address_2 }}
                                     {% endif %}
                                 </a>
                                 {% if user.is_staff %}
@@ -21,9 +23,9 @@
                             </h4>
                         {% elif instrument.instrument_status == "Available" %}
                             <h4 class="alert alert-success" role="alert">
-                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address|cut:"130.27.111." }}
+                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address }}
                                     {% if instrument.ip_address_2 %}
-                                        {{instrument.ip_address_2|cut:"130.27.111." }}
+                                        {{instrument.ip_address_2 }}
                                     {% endif %}
                                 </a>
                                 {% if user.is_staff %}
@@ -32,9 +34,9 @@
                             </h4>
                         {% elif instrument.instrument_status == "In Use" %}
                             <h4 class="alert alert-warning" role="alert">
-                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address|cut:"130.27.111." }}
+                                <a href="{% url 'instrument_detail' pk=instrument.pk %}">{{ instrument.instrument_type }} {{instrument.ip_address }}
                                     {% if instrument.ip_address_2 %}
-                                        {{instrument.ip_address_2|cut:"130.27.111." }}
+                                        {{instrument.ip_address_2 }}
                                     {% endif %}
                                 </a>
                                 {% if user.is_staff %}
@@ -58,7 +60,7 @@
                                 {% endfor %}
                             </h6>
                         {% endif %}
-
+                        <!--Changes the buttons for user based on ownership status for each instrument-->
                         {% if instrument.instrument_current_owner == user and instrument.instrument_connection == True %}
                             <h5>
                                 <a href="{% url 'instrument_close_connection' pk=instrument.pk %}" class="btn btn-default role="button">Ready to test</a>
