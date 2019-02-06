@@ -1,0 +1,39 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="detail">
+        <h1> Instrument Components </h1>
+        <h5>
+            {% if instrument.instrument_detector_1 %}
+                Detector 1: {{ instrument.instrument_detector_1 }}<br>
+            {% endif %}
+            {% if instrument.instrument_detector_2 %}
+                Detector 2: {{ instrument.instrument_detector_2 }}<br>
+            {% endif %}
+            {% if instrument.instrument_detector_3 %}
+                Detector 3: {{ instrument.instrument_detector_3 }}<br>
+            {% endif %}
+            {% if instrument.instrument_sampler_1 %}
+                Sampler 1: {{ instrument.instrument_sampler_1 }}<br>
+            {% endif %}
+            {% if instrument.instrument_sampler_2 %}
+                Sampler 2: {{ instrument.instrument_sampler_2 }}<br>
+            {% endif %}
+            {% if instrument.instrument_pump %}
+                Pump: {{ instrument.instrument_pump }}<br>
+            {% endif %}
+            {% if instrument.instrument_column_compartment %}
+                Column Compartment: {{ instrument.instrument_column_compartment }}<br>
+            {% endif %}
+        </h5>
+        <h1> Complete Wait List </h1>
+        <h5>{% for checklist in checklists %}
+            <!--Filtering out names to their respective instruments -->
+
+            {% ifequal checklist.instrument_pk instrument.pk %}
+            <li>{{ checklist.display_name }}</li>
+            {% endifequal %}
+            {% endfor %}
+        </h5>
+    </div>
+{% endblock %}

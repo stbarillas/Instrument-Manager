@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="detail">
+        <div class="checkout-detail">
+            {% if onlist %}
+                <h1>You cannot join a wait list twice</h1>
+                <h1><a href="{% url 'instrument_list' %}" >Return to the homepage</a></h1>
+            {% else %}
+                <div class="instrument">
+                    <h1> Checking Out: {{ instrument.instrument_type }} {{ instrument.ip_address }}</h1>
+                    <form method="POST" class="post-form">{% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="save btn btn-default">Confirm</button>
+                        <a href="{% url 'instrument_list' %}" class="btn btn-default" role="button">Cancel</a>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

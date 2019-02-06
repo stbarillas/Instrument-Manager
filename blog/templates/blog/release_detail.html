@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+
+    <div class="detail">
+        <div class="release_detail">
+            {% if not onlist %}
+                <h1>You are not on this Wait list</h1>
+                <h1><a href="{% url 'instrument_list' %}" >Return to the homepage</a></h1>
+            {% else %}
+                <h1> Releasing: {{ instrument.instrument_type }} {{ instrument.ip_address }}</h1>
+                <h1> Are you sure want to release? You will lose your place in line!</h1>
+                <form method="POST" class="post-form">{% csrf_token %}
+                    {{ form.as_p }}
+                        <button type="submit" class=" btn btn-default">Yes</button>
+                        <a href="{% url 'instrument_list' %}" class="btn btn-default" role="button">Cancel</a>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block logoutConfirm %}class="active"{% endblock %}
+{% block content %}
+    <div class="detail">
+        <div class="logout-confirm-page">
+            <div class="logout-confirm-elements">
+                <h1> Are you sure you want to logout? </h1>
+                <a href="{% url 'logout' %}" class="btn btn-default" role="button">Yes</a>
+                <a href="{% url 'instrument_list' %}" class="btn btn-default" role="button">Cancel</a>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

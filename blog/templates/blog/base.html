@@ -1,0 +1,48 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>RAM</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    </head>
+
+<body>
+    <div id="wrapper">
+        <!--Topbar-->
+        <div id="topbar-wrapper">
+            <div class="topbar-nav">
+                <h1><a href="/">Resource Allocation Manager</a></h1>
+            </div>
+        </div>
+
+
+        <!--Sidebar-->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li> Hi, {{user}}</a> </li>
+                <li {% block instruments %}{% endblock %}><a href="/">Instruments</a> </li>
+                {% if user.is_staff %}
+                    <li {% block instrumentsNew %}{% endblock %}><a href="{% url 'instrument_new' %}">Add New Instrument</a> </li>
+                {% endif %}
+                <li {% block userSettings %}{% endblock %}><a href="{% url 'user_settings' %}">User Settings</a> </li>
+                {% if user.is_staff %}
+                    <li {% block massMessage %}{% endblock %}><a href="{% url 'mass_message' %}">Mass Message</a> </li>
+                {% endif %}
+                <li {% block logoutConfirm %}{% endblock %}><a href="{% url 'logout_confirm' %}">Logout</a> </li>
+
+            </ul>
+        </div>
+
+        <!--Page Content-->
+        <div id="page-content-wrapper">
+            <div class="page-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>

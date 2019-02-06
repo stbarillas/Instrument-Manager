@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block userSettings %}class="active"{% endblock %}
+{% block content %}
+    <div class="detail">
+        <div class="user-settings-page">
+            <div class="user-settings-elements">
+                <a href="{% url 'password_change' %}">Change your password</a>
+                <form method="POST" class="post-form">{% csrf_token %}
+                    {{ profile_form.as_p }}
+                    <button type="submit" class="save btn btn-default">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

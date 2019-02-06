@@ -1,0 +1,32 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>RAM</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+
+    <body>
+        <div class="login-page">
+            <div class="login-elements">
+                    <h1> Resource Allocation Manager </h1>
+                    <form id="login_form" method="post">
+                        {% csrf_token %}
+                        <div class="login-inputs">
+                            <span>
+                                <h10>Username:</h10>  <input type="text" name="username" size="10" />
+                            </span>
+                            <span>
+                                <h10>Password:  </h10> <input type="password" name="password" size="10" />
+                            </span>
+                        </div>
+                        <span>
+                            <input class="btn btn-default btn-lg" type="submit" value="Login" />
+                            <a href="{% url 'register' %}" class="btn btn-default btn-lg" role="button">Register</a>
+                        </span>
+                    </form>
+            </div>
+        </div>
+    </body>

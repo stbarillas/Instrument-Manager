@@ -1,0 +1,12 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="detail">
+        {% if error == "not current owner" %}
+            <h1>Nice try, but you aren't the current instrument owner...</h1>
+        {% else %}
+            <h1>Cannot close the connection, RAM is not holding the instrument </h1>
+        {% endif %}
+
+    </div>
+{% endblock %}
