@@ -7,6 +7,7 @@
         <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     </head>
 <!--This is the layout for the homepage-->
@@ -33,8 +34,13 @@
                     <li {% block massMessage %}{% endblock %}><a href="{% url 'mass_message' %}">Mass Message</a> </li>
                 {% endif %}
                 <li {% block logoutConfirm %}{% endblock %}><a href="{% url 'logout_confirm' %}">Logout</a> </li>
-
             </ul>
+            <div class="sidebar-icon">
+                <a href="https://github.com/stbarillas/Instrument-Manager">
+                    <i class="login-github fab fa-github-square fa-9x"></i>
+                </a>
+                <p>SBB © 2017, all rights reserved. Made with Djano + Bootstrap 3.x + Celery </p>
+            </div>
         </div>
 
         <!--Page Content-->
