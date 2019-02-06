@@ -3,132 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08e5428b-0ccd-4366-91ba-3feaea223422" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/blog/admin.py" afterPath="$PROJECT_DIR$/blog/admin.py" />
-      <change beforePath="$PROJECT_DIR$/blog/forms.py" afterPath="$PROJECT_DIR$/blog/forms.py" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/01-002_creating_and_revising_documentation.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/01-011_Software_Issue_Management_Process.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/1.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/2.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Chrysanthemum.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Desert.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Desert_lgxPF01.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Desert_sge5Yoy.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Penguins.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Software_Development_Life_Cycle.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Software_Version_Numbering_Standard.docx" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Tulips.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Tulips_9IWCujZ.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/Tulips_sG2Y5Dv.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/message.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/documents/message_NoQ0zcC.txt" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_3RfDCL9.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_44JpZSb.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_6Vd5alZ.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_86XFf8f.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_FjqF2QX.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_OVB3ldw.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_T9e1zet.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_WJH6wlH.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_YTvy5E6.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_cv07f1J.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_hWKLfjo.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_ic5hwYu.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_mEx5TYt.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_mgRxYr0.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_nTWnP3B.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/1_yGmdxYF.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/2.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/2_4k7LJdO.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/2_BRefD3x.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/2_Ip0pO9y.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/2_waBdoI5.JPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Capture.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_97VtCbh.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_9LvhNDF.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_M9UVB65.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_MWOmThM.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_PD0INIv.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_RoEznHd.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_WXlPIoF.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_d2Gn9e8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_i94IgLi.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_ihfgRWo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_iynd4v9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_lRgrq2Y.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Chrysanthemum_oejUt80.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_1jpmRhk.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_252UlNI.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_4omM3mt.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_L0lNOiP.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_SBiSPl1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_kcOsU97.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_oYwImWb.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_rmQIcMc.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_vNiCMi0.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Desert_yxYEe0a.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas_COOZvdZ.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas_HjXpPsS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas_r2HdYlS.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas_yTzNcFo.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Hydrangeas_ypSQZAX.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish_DRupE3A.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish_FRnDK9D.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish_KAyoINa.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish_RRHZJHD.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Jellyfish_p2VBgUP.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Koala.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Koala_4ACxaW9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Koala_9kGK8vI.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Koala_JDtg6qL.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Koala_ajToAHX.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Lighthouse.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Penguins.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Penguins_YMGYM6y.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Tulips.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Tulips_6uTQUcr.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/Tulips_NfvyvV5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/box.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/failed.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/failed_lP9LGKs.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/media/records/failed_tGXLHJN.PNG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/blog/models.py" afterPath="$PROJECT_DIR$/blog/models.py" />
-      <change beforePath="$PROJECT_DIR$/blog/static/css/blog.css" afterPath="$PROJECT_DIR$/blog/static/css/blog.css" />
-      <change beforePath="$PROJECT_DIR$/blog/static/js/blog-jquery.js" afterPath="$PROJECT_DIR$/blog/static/js/blog-jquery.js" />
-      <change beforePath="$PROJECT_DIR$/blog/tasks.py" afterPath="$PROJECT_DIR$/blog/tasks.py" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/checkout_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/checkout_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_close_connection.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_close_connection.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_edit.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_edit.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_list.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_list.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_new.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_new.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/instrument_open_connection.html" afterPath="$PROJECT_DIR$/blog/templates/blog/instrument_open_connection.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/login.html" afterPath="$PROJECT_DIR$/blog/templates/blog/login.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/logout_confirm.html" afterPath="$PROJECT_DIR$/blog/templates/blog/logout_confirm.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/mass_message.html" afterPath="$PROJECT_DIR$/blog/templates/blog/mass_message.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/not_today.html" afterPath="$PROJECT_DIR$/blog/templates/blog/not_today.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/password_change.html" afterPath="$PROJECT_DIR$/blog/templates/blog/password_change.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_list.html" afterPath="$PROJECT_DIR$/blog/templates/blog/post_list.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/register.html" afterPath="$PROJECT_DIR$/blog/templates/blog/register.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/release_detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/release_detail.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/user_message.html" afterPath="$PROJECT_DIR$/blog/templates/blog/user_message.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/user_settings.html" afterPath="$PROJECT_DIR$/blog/templates/blog/user_settings.html" />
-      <change beforePath="$PROJECT_DIR$/blog/templatetags/tables.py" afterPath="$PROJECT_DIR$/blog/templatetags/tables.py" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" afterPath="$PROJECT_DIR$/blog/urls.py" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" afterPath="$PROJECT_DIR$/blog/views.py" />
-      <change beforePath="$PROJECT_DIR$/example.xlsm" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/mysite/__init__.py" afterPath="$PROJECT_DIR$/mysite/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/celery.py" afterPath="$PROJECT_DIR$/mysite/celery.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings.py" afterPath="$PROJECT_DIR$/mysite/settings.py" />
-      <change beforePath="$PROJECT_DIR$/mysite/urls.py" afterPath="$PROJECT_DIR$/mysite/urls.py" />
-      <change beforePath="$PROJECT_DIR$/populate.py" afterPath="$PROJECT_DIR$/populate.py" />
-      <change beforePath="$PROJECT_DIR$/training populate.py" afterPath="" />
     </list>
     <ignored path="djangogirls.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -299,7 +173,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1294" />
@@ -639,7 +513,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
