@@ -1,5 +1,12 @@
 import os
+from celery import Celery
+
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
+os.environ.setdefault('FORKED_BY_MULTIPROCESSING', '1')
+
+app = Celery('mysite', broker='amqp://guest@localhost//')
+app.config_from_object('django.conf:settings', namespace='CELERY')
+app.autodiscover_tasks()
 
 import django
 django.setup()
@@ -9,92 +16,92 @@ from blog.models import Instrument
 def populate():
 
     add_instrument(type='GC',
-                   address='130.27.111.40',
-                   name="GC 130.27.111.40"
+                   address='111.11.111.40',
+                   name="GC 111.11.111.40"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.41',
-                   name="GC 130.27.111.41"
+                   address='111.11.111.41',
+                   name="GC 111.11.111.41"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.42',
-                   name="GC 130.27.111.42"
+                   address='111.11.111.42',
+                   name="GC 111.11.111.42"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.43',
-                   name="GC 130.27.111.43"
+                   address='111.11.111.43',
+                   name="GC 111.11.111.43"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.44',
-                   name="GC 130.27.111.44"
+                   address='111.11.111.44',
+                   name="GC 111.11.111.44"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.45',
-                   name="GC 130.27.111.45"
+                   address='111.11.111.45',
+                   name="GC 111.11.111.45"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.46',
-                   name="GC 130.27.111.46"
+                   address='111.11.111.46',
+                   name="GC 111.11.111.46"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.48',
-                   name="GC 130.27.111.48"
+                   address='111.11.111.48',
+                   name="GC 111.11.111.48"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.51',
-                   name="GC 130.27.111.51"
+                   address='111.11.111.51',
+                   name="GC 111.11.111.51"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.52',
-                   name="GC 130.27.111.52"
+                   address='111.11.111.52',
+                   name="GC 111.11.111.52"
                    )
     add_instrument(type='GC',
-                   address='130.27.111.53',
-                   name="GC 130.27.111.53"
+                   address='111.11.111.53',
+                   name="GC 111.11.111.53"
                    )
     add_instrument(type='GCMS',
-                   address='130.27.111.49',
-                   name="GCMS 130.27.111.49"
+                   address='111.11.111.49',
+                   name="GCMS 111.11.111.49"
                    )
     add_instrument(type='GCMS',
-                   address='130.27.111.54',
-                   name="GCMS 130.27.111.54"
+                   address='111.11.111.54',
+                   name="GCMS 111.11.111.54"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.60',
-                   name="LC 130.27.111.60"
+                   address='111.11.111.60',
+                   name="LC 111.11.111.60"
                    )
     add_instrument(type= 'LC',
-                   address= '130.27.111.61',
-                   name= "LC 130.27.111.61"
+                   address= '111.11.111.61',
+                   name= "LC 111.11.111.61"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.62',
-                   name="LC 130.27.111.62"
+                   address='111.11.111.62',
+                   name="LC 111.11.111.62"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.63',
-                   name="LC 130.27.111.63"
+                   address='111.11.111.63',
+                   name="LC 111.11.111.63"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.64',
-                   name="LC 130.27.111.64"
+                   address='111.11.111.64',
+                   name="LC 111.11.111.64"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.65',
-                   name="LC 130.27.111.65"
+                   address='111.11.111.65',
+                   name="LC 111.11.111.65"
                    )
     add_instrument(type='LC',
-                   address='130.27.111.66',
-                   name="LC 130.27.111.66"
+                   address='111.11.111.66',
+                   name="LC 111.11.111.66"
                    )
     add_instrument(type='LCMS',
-                   address='130.27.111.67',
-                   name="LCMS 130.27.111.67"
+                   address='111.11.111.67',
+                   name="LCMS 111.11.111.67"
                    )
     add_instrument(type='LCMS',
-                   address='130.27.111.69',
-                   name="LCMS 130.27.111.69"
+                   address='111.11.111.69',
+                   name="LCMS 111.11.111.69"
                    )
 
     print('population complete')
