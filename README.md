@@ -15,7 +15,7 @@ Instrument Manger is a full-stack web application for visualizing instrument usa
 - Celery
 
 
-## Local Development
+## Local Development 💾 💿 🕹
 ### Installation 
 #### 1.	Install Python (3.5.X used), Erlang OTP (21.2), & RabbitMQ (3.7.11) on your machine 
 
@@ -49,5 +49,5 @@ The site is now running at
 Open *Resource-Allocation-Manager* directory in your code editor of choice and edit it. Save your changes and the browser will update in real time!
 
 
-## Contact Me
+## Contact Me 📞
 If you have any questions or suggestions please do not hesitate to contact me at stbarillas@gmail.com
