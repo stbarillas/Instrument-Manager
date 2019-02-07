@@ -30,7 +30,7 @@ In order for notifications to work, you will need an email service. SendGrid SMT
 
 
 #### 4.	Running in development mode 💻
-In *Resource-Allocation-Manager* directory
+In *Resource-Allocation-Manager* directory:
 
 Activate the virtual environment
 > 'myvenv\Scripts\activate'
