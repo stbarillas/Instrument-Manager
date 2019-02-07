@@ -20,8 +20,13 @@ Instrument Manger is a full-stack web application for visualizing instrument usa
 
 #### 2.	Clone the repository
 > 'Git clone https://github.com/stbarillas/Instrument-Manager.git'
-3.	Running in development mode
-a.	In resourceallocationmanager directory:
+
+#### 3. SMTP Setup
+In order for notifications to work, you will need an email service. SendGrid SMTP is a free solution I use for development
+- Open 'Resource-Allocation-Manager\mysite\settings.py with your code editor of choice and enter your SendGrid SMTP settings (~Lines 120-130)
+
+#### 4.	Running in development mode
+a.	In Resource-Allocation-Manager directory:
 i.	Activate the virtual environment
 ii.	Run python manage.py runserver
 iii.	Activate the virtual environment in a separate CMD window
