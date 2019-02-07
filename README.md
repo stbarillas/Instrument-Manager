@@ -5,15 +5,17 @@
 Instrument Manger is a full-stack web application for visualizing instrument usage and notifying employees once their instrument of interest is available.
 
 ## Features
-- Django (Backend)
-- Bootstrap 3.x (Frontend)
+- Django (Back-End)
+- Bootstrap 3.x (Front-End)
 - RabbitMQ (Broker)
 - Celery
 
 ## Local Development
-1.	Install Python (3.5.X used), Erlang OTP (21.2), & RabbitMQ (3.7.11) on your machine 
-2.	Clone the repository
-a.	Git clone
+## Installation
+### 1.	Install Python (3.5.X used), Erlang OTP (21.2), & RabbitMQ (3.7.11) on your machine 
+
+### 2.	Clone the repository
+> 'Git clone https://github.com/stbarillas/Instrument-Manager.git'
 3.	Running in development mode
 a.	In resourceallocationmanager directory:
 i.	Activate the virtual environment
