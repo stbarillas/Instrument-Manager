@@ -30,12 +30,12 @@ In order for notifications to work, you will need an email service. SendGrid SMT
 
 
 #### 4.	Running in development mode 💻
-a.	In *Resource-Allocation-Manager* directory:
-- Activate the virtual environment
+##### In *Resource-Allocation-Manager* directory:
+Activate the virtual environment
 > 'myvenv\Scripts\activate'
-- Start the Django Server
+Start the Django Server
 > 'python manage.py runserver'
-- Start the Celery worker in a seperate CMD window with virtual environment activated
+Start the Celery worker in a seperate CMD window with virtual environment activated
 > 'celery -A mysite worker -l info'
 
 
