@@ -12,7 +12,7 @@
     <body>
         <div class="login-page">
             <div class="login-elements">
-                <h1> Resource Allocation Manager </h1>
+                <h1> Instrument - Manager </h1>
                 <form id="login_form" method="post">
                     {% csrf_token %}
                     <div class="login-inputs">
@@ -26,7 +26,10 @@
                     <span>
                         <input class="btn btn-default btn-lg" type="submit" value="Login" />
                         <a href="{% url 'register' %}" class="btn btn-default btn-lg" role="button">Register</a>
+                        <p>Default User: admin</p>
+                        <p>Default PW: 3000hanover</p>
                     </span>
+
                 </form>
             </div>
             <div class="login-renegade">

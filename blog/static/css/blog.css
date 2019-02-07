@@ -239,6 +239,12 @@ h5 {
     color: #FFFFFF;
     opacity: 1;
 }
+.login-elements form span p {
+    font-size: 20;
+    font-family: 'Lobster', cursive;
+    color: #FFFFFF;
+    margin-top: 15;
+}
 
 /* register page styling */
 .register-page {
