@@ -26,11 +26,11 @@ Instrument Manger is a full-stack web application for visualizing instrument usa
 
 #### 3. SMTP Setup 
 In order for notifications to work, you will need an email service. SendGrid SMTP is a free solution I use for development
-- Open 'Resource-Allocation-Manager\mysite\settings.py with your code editor of choice and enter your SendGrid SMTP settings (~Lines 120-130)
+- Open 'Instrument-Manager\mysite\settings.py with your code editor of choice and enter your SendGrid SMTP settings (~Lines 120-130)
 
 
 #### 4.	Running in development mode 
-In *Resource-Allocation-Manager* directory:
+In *Instrument-Manager* directory:
 
 Activate the virtual environment
 > 'myvenv\Scripts\activate'
