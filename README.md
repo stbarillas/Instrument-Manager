@@ -31,8 +31,10 @@ i.	Activate the virtual environment
 ii.	Run python manage.py runserver
 iii.	Activate the virtual environment in a separate CMD window
 iv.	Run Celery -A mysite worker -l infor
-4.	Open the source code and start editing
+
+#### 5.	Open the source code and start editing
 a.	The sire is now running at http://localhost:8000
 b.	Open directory in your code editor of choice and edit it. Save your changes and the browser will update in real time!
+
 ## Contact Me
 If you have any questions or suggestions please do not hesitate to contact me at stbarillas@gmail.com
