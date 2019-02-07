@@ -125,4 +125,4 @@ EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER ='apikey'
-EMAIL_HOST_PASSWORD ='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'
+EMAIL_HOST_PASSWORD = '' # <--- Place your API key here to configure SendGrid
