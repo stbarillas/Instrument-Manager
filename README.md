@@ -1,8 +1,14 @@
-## 4th place Winner: Agilent Technologies Ship-It Hackathon
+# 4th place Winner: Agilent Technologies Ship-It Hackathon
  
-# Instrument-Manager
+## Instrument-Manager
 
-Instrument Manger is a full-stack web application for visualizing instrument usage and notifying employees once their instrument of interest is available. It is built using Django with Bootstrap 3.x Front-end, and offers asynchronous notifications with Celery/RabbitMQ.
+Instrument Manger is a full-stack web application for visualizing instrument usage and notifying employees once their instrument of interest is available.
+
+## Features
+- Django (Backend)
+- Bootstrap 3.x (Frontend)
+- RabbitMQ (Broker)
+- Celery
 
 ## Local Development
 1.	Install Python (3.5.X used), Erlang OTP (21.2), & RabbitMQ (3.7.11) on your machine 
