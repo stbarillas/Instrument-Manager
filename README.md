@@ -1,4 +1,4 @@
-# 🏆 4th place: Agilent Technologies Ship-It Hackathon 🏆
+# 🏆 4th place: 2018 Agilent Technologies Ship-It Hackathon 🏆
  
 ## Instrument-Manager
 Instrument Manger is a full-stack web application for visualizing instrument usage and notifying employees once their instrument of interest is available.
